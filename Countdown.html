@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 300px;
+            margin: 80px auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        div input {
+            width: 240px;
+            height: 30px;
+            outline: none;
+            border: 0;
+        }
+
+        div span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            right: 10px;
+            top: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <label for="">
+            <span id="spa"></span>
+        </label>
+        <input type="password" id="pswd">
+    </div>
+    <script>
+        var spa = document.getElementById("spa")
+        var pas = document.getElementById("pswd")
+        var flat = 0
+        spa.onclick = function () {
+            if (flat == 0) {
+                pas.type = "text"
+                flat = 1
+            } else if (flat == 1) {
+                pas.type = "password"
+                flat = 0
+            }
+        }
+    </script>
+</body>
+
+</html>
